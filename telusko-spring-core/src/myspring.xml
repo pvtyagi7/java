@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+ -->	
+	
+<!-- 	<bean id="car" class="com.Telusko.Car"></bean> -->
+	<!-- <bean id="vehicle" class="com.Telusko.Car"></bean> -->
+	<!-- Below the code is called setter injection because we assign the value in tyre class using the setter named 'setBrand' inside Tyre class -->
+	<!-- <bean id="tyre" class="com.Telusko.Tyre">
+		<property name="brand" value="yokohama"></property>
+	</bean>
+	<bean id="tyre1" class="com.Telusko.Tyre">
+		<property name="brand" value="TVS"></property>
+	</bean>
+	 -->
+	<!-- Below the code is called Constructor injection because we do the same above work using constructor(of Telusko class) insted of setter method -->
+	<!-- <bean id="tyreC" class="com.Telusko.Tyre">
+		<constructor-arg value="MRF"></constructor-arg>
+	</bean> -->
+<!-- </beans> -->
+
+
+ <beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:context = "http://www.springframework.org/schema/context"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+
+   <context:annotation-config/>
+ <!--   bean definitions go here -->
+   <context:component-scan base-package="com.Telusko"></context:component-scan>
+	<!-- Below is the line for XML based configration  -->
+	<!-- <bean id="car" class="com.Telusko.Car"></bean> -->
+</beans>
